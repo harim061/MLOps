@@ -11,10 +11,13 @@ jobs:
                   python-version: 3.9
             - name: Install dependencies
               run: |
+                  cd ch1
                   make install
             - name: Lint
               run: |
+                  cd ch1  
                   make lint
             - name: Test
               run: |
+                  cd ch1
                   make test
