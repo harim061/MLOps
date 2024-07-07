@@ -6,16 +6,14 @@ LABEL org.label-schema.version=${VERSION}
 
 RUN python3 -m pip install --upgrade pip
 
-WORKDIR /ws
 COPY ./requirements.txt /ws/requirements.txt
 
+WORKDIR /ws
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
-# Flask 및 Werkzeug 패키지 업데이트
-RUN pip install --no-cache-dir --upgrade flask
-RUN pip install Werkzeug==0.16.1
-
+# Werkzeug 패키지 업데이트
+RUN pip install --upgrade Werkzeug
 
 COPY ./webapp/ /ws
 
