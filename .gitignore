@@ -186,3 +186,5 @@ venv/
 */*/venv/
 Lib/
 
+
+*/flask-docker-onnx-venv/
